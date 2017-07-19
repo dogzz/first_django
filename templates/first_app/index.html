@@ -9,7 +9,9 @@
 <body>
 <h1>Title Page</h1>
 <h2><a href="/users">Users</a></h2>
+<h2><a href="/signup">Sign Up</a></h2>
 <h2><a href="/second_app">Second App</a></h2>
+<h2><a href="{% url 'third_app:third_index' %}">Third App</a></h2>
 <div class="djangtwo">
   {% if access_records %}
     <table>
