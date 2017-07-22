@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from second_app import forms
 # Create your views here.
@@ -5,7 +6,7 @@ from second_app import forms
 def index(request):
     return render(request, 'second_app/index.html')
 
-
+@login_required
 def form_name_view(request):
     form = forms.FormName()
     if request.method == 'POST':

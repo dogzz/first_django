@@ -19,10 +19,13 @@ from first_app import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+
     url(r'^users', views.users, name='users'),
     url(r'^signup', views.add_user, name='signup'),
     url(r'first_app/', include('first_app.urls')),
     url(r'second_app/', include('second_app.urls')),
     url(r'third_app/', include('third_app.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^logout$', views.user_logout, name='logout'),
+
 ]

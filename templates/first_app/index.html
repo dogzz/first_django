@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title 1</title>
-    <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
-</head>
-<body>
+{% extends "first_app/base.html" %}
+{% block body_block %}
+
+
+<div class="jubmotron">
 <h1>Title Page</h1>
 <h2><a href="/users">Users</a></h2>
 <h2><a href="/signup">Sign Up</a></h2>
@@ -30,5 +27,5 @@
       <p>No records</p>
   {% endif %}
 </div>
-</body>
-</html>
+</div>
+{% endblock %}
